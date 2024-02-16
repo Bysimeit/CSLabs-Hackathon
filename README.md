@@ -12,11 +12,17 @@ Objectifs :
   - Voir des statistiques afin de prévoir d'éventuelle session de ratrappage par UA
   - Reçevoir des alertes si l'on remarque un élève avec un taux de réussite plus bas que la normal
   - Possibilité de créer des palier de récompense (par exemple : le prof doit raconter une blague ou regarder un film)
+  - Recevoir des conseils sur comment motiver des élèves. Un blog interprof?
+
 - Coté Elève :
   - Consultation de son profil avec les différentes étape et leur état
   - Possibilité d'ajout d'information dans une UA/Etape
   - Possibilité de mettre son profil en public/privé afin de pouvoir se comparer aux autres
   - Possibilité de dépenser ses points pour acheter des paliers de récompense  
+
+- Système de points : 
+  - les points peuvent être utile pour acheter des skins, certains cours peuvent donner des skins exclusifs. Le profs à un certains controle sur le gains des points pour s'assurer de donner les points à ceux qui le mérite.
+  - Les profs peuvent créer des palliers de points. Une fois atteind le prof devra réaliser une tache qui sera lié au pallier
 
 Besoins :
 - Api
