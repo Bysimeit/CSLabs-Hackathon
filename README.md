@@ -15,7 +15,7 @@ Objectifs :
   - Consultation de son profil avec les différentes étape et leur état
   - Possibilité d'ajout d'information dans une UA/Etape
   - Possibilité de mettre son profil en public/privé afin de pouvoir se comparer aux autres
-  - Quand les étapes sont validées, l'élève voient une animation stimulante et reçois des points  
+  - Quand les étapes sont validées, l'élève voient une animation stimulante et reçois des points   --> ouverture de coffre à la Vampire survivors + progression/amélioration long terme  
 
 Besoins :
 - Api
