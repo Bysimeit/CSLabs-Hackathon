@@ -11,11 +11,12 @@ Objectifs :
   - Possibilité d'ajouter des remarques ou commentaire pour chaque UA/Etape
   - Voir des statistiques afin de prévoir d'éventuelle session de ratrappage par UA
   - Reçevoir des alertes si l'on remarque un élève avec un taux de réussite plus bas que la normal
+  - Possibilité de créer des palier de récompense (par exemple : le prof doit raconter une blague ou regarder un film)
 - Coté Elève :
   - Consultation de son profil avec les différentes étape et leur état
   - Possibilité d'ajout d'information dans une UA/Etape
   - Possibilité de mettre son profil en public/privé afin de pouvoir se comparer aux autres
-  - Quand les étapes sont validées, l'élève voient une animation stimulante et reçois des points   --> ouverture de coffre à la Vampire survivors + progression/amélioration long terme  
+  - Possibilité de dépenser ses points pour acheter des paliers de récompense  
 
 Besoins :
 - Api
