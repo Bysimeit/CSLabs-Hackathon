@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, Image } from 'react-native';
 
 // GUI configuration 
 var myGUIConfig = {
@@ -25,7 +25,18 @@ var myGUIConfig = {
       y: 170,
       borderRadius: 45
     }
-  ]
+  ],
+  character: {
+    imagePath: require("../assets/skins/Jenny.png"),
+    position: {
+      x: 150,
+      y: 310
+    },
+    size: {
+      width: 40,
+      height: 60
+    }
+  },
 }
 
 export default function Accueil({ navigation }) {
@@ -42,6 +53,7 @@ export default function Accueil({ navigation }) {
                   );
               }
           })}
+          <Image source={myGUIConfig.character.imagePath} style={getCharacterStyle()} />
       </ImageBackground>
   );
 }
@@ -70,6 +82,16 @@ const getRectangleStyle = (rectConfig) => {
       height: rectConfig.height,
       backgroundColor: rectConfig.color,
       borderRadius: rectConfig.borderRadius,
+  };
+};
+
+const getCharacterStyle = () => {
+  return {
+      position: 'absolute',
+      left: myGUIConfig.character.position.x,
+      top: myGUIConfig.character.position.y,
+      width: myGUIConfig.character.size.width,
+      height: myGUIConfig.character.size.height,
   };
 };
 
