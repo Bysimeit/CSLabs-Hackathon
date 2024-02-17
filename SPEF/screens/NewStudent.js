@@ -15,7 +15,7 @@ export default function NewStudent({ navigation }) {
             Un professeur ne t'a pas encore mis dans sa classe.
           </Text>
           <Text style={styles.textParaEnd}>
-            Donne lui ce code pour l'aider à te retrouver :
+            Donne lui ce code pour qu'il t'ajoute :
           </Text>
           <View style={styles.markdown}>
             <Text style={styles.markdownText}>IDÉTUDIANT</Text>
