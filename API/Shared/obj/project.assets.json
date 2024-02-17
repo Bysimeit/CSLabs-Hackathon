@@ -985,6 +985,16 @@
             "rid": "win"
           }
         }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
@@ -2720,12 +2730,18 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../SqlDatabase/Shared.csproj",
+      "msbuildProject": "../SqlDatabase/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.EntityFrameworkCore >= 8.0.2",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.2"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.2",
+      "Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2735,11 +2751,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bryce\\Source\\Repos\\Bysimeit\\CSLabs-Hackathon\\API\\Shared\\SqlDatabase.csproj",
+      "projectUniqueName": "C:\\Users\\Bryce\\source\\repos\\Bysimeit\\CSLabs-Hackathon\\API\\Shared\\SqlDatabase.csproj",
       "projectName": "SqlDatabase",
-      "projectPath": "C:\\Users\\Bryce\\Source\\Repos\\Bysimeit\\CSLabs-Hackathon\\API\\Shared\\SqlDatabase.csproj",
+      "projectPath": "C:\\Users\\Bryce\\source\\repos\\Bysimeit\\CSLabs-Hackathon\\API\\Shared\\SqlDatabase.csproj",
       "packagesPath": "C:\\Users\\Bryce\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bryce\\Source\\Repos\\Bysimeit\\CSLabs-Hackathon\\API\\Shared\\obj\\",
+      "outputPath": "C:\\Users\\Bryce\\source\\repos\\Bysimeit\\CSLabs-Hackathon\\API\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2759,7 +2775,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Bryce\\source\\repos\\Bysimeit\\CSLabs-Hackathon\\API\\SqlDatabase\\Shared.csproj": {
+              "projectPath": "C:\\Users\\Bryce\\source\\repos\\Bysimeit\\CSLabs-Hackathon\\API\\SqlDatabase\\Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

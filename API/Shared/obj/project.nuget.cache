@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "722mSRX94j199JNhuMlseGMqsUysvA76akOLKTa+3+ZBv2I9NgAWivC27OLhazUwdokQvXEWdCZBfgrzLUrisQ==",
+  "dgSpecHash": "bFhMDnaNjATYFCea/mBpjuuMS/ZjJCcQLmC+s2DJN6KJG8sOAi37t9Ig/Mwje90QiJquJ0/XOeYhIXauq6wU3g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bryce\\Source\\Repos\\Bysimeit\\CSLabs-Hackathon\\API\\Shared\\SqlDatabase.csproj",
+  "projectFilePath": "C:\\Users\\Bryce\\source\\repos\\Bysimeit\\CSLabs-Hackathon\\API\\Shared\\SqlDatabase.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bryce\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Bryce\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
