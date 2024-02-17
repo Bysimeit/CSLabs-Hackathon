@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SqlDatabase
-build_property.ProjectDir = C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\Shared\
+build_property.ProjectDir = C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Shared\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
