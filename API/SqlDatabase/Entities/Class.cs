@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Shared.Entities
 {
-	internal class Class
+	public class Class
 	{
+		public int Id { get; set; }
+		public int TeacherId { get; set; }
+		public Teacher Teacher { get; set; }
+		public List<Lesson> Lessons { get; set; }
+		public List<Student> Students { get; set; }
 	}
 }

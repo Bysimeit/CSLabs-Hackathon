@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Interfaces
 {
-	internal interface IStudentsRepository
+	public interface IStudentsRepository
 	{
 	}
 }

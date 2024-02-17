@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JYoWfA1J16F8cQ9NKy81Sb9SOfHsP0d701Isp3IcXPdjCQDAQKzzL64rLs+jrxxEmSNMP7waSRBBmY6YhvNIgg==",
+  "dgSpecHash": "MINUkK2/fyYYYdvRuluJAo82cwbolsryaksEaH1n7hTa1K9KHghMa7WBl7GjF6ehFgy38Q/SfMm1Z+hunsFdaQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sca\\Documents\\Projets\\CSLabs-Hackathon\\API\\SqlDatabase\\Shared.csproj",
+  "projectFilePath": "C:\\Users\\Bryce\\source\\repos\\Bysimeit\\CSLabs-Hackathon\\API\\SqlDatabase\\Shared.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
