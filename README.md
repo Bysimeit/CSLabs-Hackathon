@@ -3,7 +3,7 @@
 Problématiques :
 Aider les personnes qui sont en manque de motivation ou en décrochage scolaire
 
-Objectifs :
+### Objectifs :
 - Application avec un coté prof et un coté élève.
 - Coté prof :
   - Edition des différentes UA à valider dans le parcours des élèves
@@ -24,6 +24,14 @@ Objectifs :
   - les points peuvent être utile pour acheter des skins, certains cours peuvent donner des skins exclusifs. Le profs à un certains controle sur le gains des points pour s'assurer de donner les points à ceux qui le mérite.
   - Les profs peuvent créer des palliers de points. Une fois atteind le prof devra réaliser une tache qui sera lié au pallier
 
-Besoins :
+## Implémentation :
+### Besoins :
 - Api
-- Web ou Mobile
+- Web ou **Mobile**
+
+### Docker :
+Pour initialiser et démarrer le service Docker du projet : 
+```
+docker-compose up
+```
+Une fois créé, vous pouvez lancer la db via le Docker Desktop pour plus de facilité.
