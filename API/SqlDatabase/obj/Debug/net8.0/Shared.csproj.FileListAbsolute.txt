@@ -1,0 +1,5 @@
+C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\SqlDatabase\obj\Debug\net8.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\SqlDatabase\obj\Debug\net8.0\Shared.AssemblyInfoInputs.cache
+C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\SqlDatabase\obj\Debug\net8.0\Shared.AssemblyInfo.cs
+C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\SqlDatabase\obj\Debug\net8.0\Shared.csproj.CoreCompileInputs.cache
+C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\SqlDatabase\obj\Debug\net8.0\Shared.sourcelink.json
