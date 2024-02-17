@@ -20,6 +20,7 @@ export default function Login({ navigation }) {
       if (password != "") {
         setUserName("");
         setPassword("");
+        navigation.navigate("Attente");
       } else {
         Alert.alert("Attends !", "N'oublie pas de mettre ton mot de passe.");
       }

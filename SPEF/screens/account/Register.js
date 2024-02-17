@@ -22,6 +22,8 @@ export default function Login({ navigation }) {
       if (firstName != "") {
         if (userName != "") {
           if (password != "") {
+            setLastName("");
+            setFirstName("");
             setUserName("");
             setPassword("");
           } else {
@@ -34,7 +36,7 @@ export default function Login({ navigation }) {
           Alert.alert("Attends !", "N'oublie pas de mettre ton pseudo.");
         }
       } else {
-        Alert.alert("Attends !", "N'oublie pas de mettre ton présnom.");
+        Alert.alert("Attends !", "N'oublie pas de mettre ton prénom.");
       }
     } else {
       Alert.alert("Attends !", "N'oublie pas de mettre ton nom.");
