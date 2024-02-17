@@ -41,3 +41,13 @@ Pour initialiser et démarrer le service Docker du projet :
 docker-compose up
 ```
 Une fois créé, vous pouvez lancer la db via le Docker Desktop pour plus de facilité.
+
+### Mobile (Expo) :
+Pour installer les packages : 
+```bash
+npm i
+```
+Pour lancer expo :
+```bash
+npx expo start
+```
