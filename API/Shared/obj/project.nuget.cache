@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "0iT3l2hUWO7P0sKMHcx6w3snWaR57rMnHFg1PnoJ/DRkxF54wlM5CRqg9tfcoVrC3yL40wUQmU78fJKm8Pp1Ag==",
+  "dgSpecHash": "vHBVDvtoz0UkN5WJAdvyj70BI8hvC08ObbcY7VNux+tzPXn1ko9sJ2MXM0QjyJNKoXnrY3Wv5tx8VkG6uMLgyA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bryce\\OneDrive\\Bureau\\Git\\CSLabs-Hackathon\\API\\Shared\\Shared.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\sca\\Documents\\Projets\\CSLabs-Hackathon\\API\\Shared\\Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sca\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\sca\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\sca\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
+  ],
   "logs": []
 }
