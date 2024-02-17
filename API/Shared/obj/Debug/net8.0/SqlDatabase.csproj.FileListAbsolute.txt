@@ -11,3 +11,6 @@ C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\Shared\obj\Debug\net8.
 C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\Shared\obj\Debug\net8.0\refint\SqlDatabase.dll
 C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\Shared\obj\Debug\net8.0\SqlDatabase.pdb
 C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\Shared\obj\Debug\net8.0\ref\SqlDatabase.dll
+C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\Shared\bin\Debug\net8.0\Shared.dll
+C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\Shared\bin\Debug\net8.0\Shared.pdb
+C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\Shared\obj\Debug\net8.0\SqlDatabase.csproj.CopyComplete

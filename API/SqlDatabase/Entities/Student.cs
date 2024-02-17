@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Shared.Entities
 {
-	internal class Student
+	public class Student
 	{
+		public int Id { get; set; }
+		public string Name { get; set; }
+		public string FirstName { get; set;}
+		public string UserName { get; set;}
+		public string Password { get; set;}
+		public int ClassId { get; set; }
+		public Class Class { get; set; }
+		public List<PointLesson> PointLessons { get; set; }
+		public List<StudentTask> StudentTasks { get; set; }
 	}
 }

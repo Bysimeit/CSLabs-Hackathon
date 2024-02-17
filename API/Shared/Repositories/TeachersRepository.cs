@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SqlDatabase.Repositories
 {
-	internal class TeachersRepository
+	public class TeachersRepository
 	{
 	}
 }
