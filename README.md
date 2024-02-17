@@ -18,7 +18,7 @@ Objectifs :
   - Consultation de son profil avec les différentes étape et leur état
   - Possibilité d'ajout d'information dans une UA/Etape
   - Possibilité de mettre son profil en public/privé afin de pouvoir se comparer aux autres
-  - Possibilité de dépenser ses points pour acheter des paliers de récompense
+  - Possibilité de dépenser ses points pour atteindre des paliers de récompense
   - Recevoir des notifications liées à la validation d'un devoir (collectés automatiquement, ils ne disparaissent pas si on n'ouvre pas l'application)
 
 
