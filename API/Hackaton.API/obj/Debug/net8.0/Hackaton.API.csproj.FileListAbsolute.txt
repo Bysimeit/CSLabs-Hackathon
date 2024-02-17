@@ -24,6 +24,9 @@ C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\Hackaton.API\obj\Debug
 C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\Hackaton.API.pdb
 C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\Hackaton.API.genruntimeconfig.cache
 C:\Users\Bryce\Source\Repos\Bysimeit\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\ref\Hackaton.API.dll
+C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\Hackaton.API.dll
+C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\refint\Hackaton.API.dll
+C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\Hackaton.API.pdb
 C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\bin\Debug\net8.0\appsettings.json
 C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\bin\Debug\net8.0\Hackaton.API.exe
@@ -45,8 +48,5 @@ C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.
 C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Hackaton.API.props
 C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\scopedcss\bundle\Hackaton.API.styles.css
-C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\Hackaton.API.dll
-C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\refint\Hackaton.API.dll
-C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\Hackaton.API.pdb
 C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\Hackaton.API.genruntimeconfig.cache
 C:\Users\sca\Documents\Projets\CSLabs-Hackathon\API\Hackaton.API\obj\Debug\net8.0\ref\Hackaton.API.dll
