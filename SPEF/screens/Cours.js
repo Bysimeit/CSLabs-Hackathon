@@ -33,7 +33,7 @@ export default function CourseScreen({ route }) {
 
     const handleTrophyPress = () => {
         if (course.rewards) {
-            navigation.navigate('RewardsScreen', { rewards: course.rewards });
+            navigation.navigate('Boutique', {rewards: course.rewards});
         }
     };
 
