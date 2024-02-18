@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Accueil from "./screens/Accueil";
 import Login from "./screens/account/Login";
 import Register from "./screens/account/Register";
+import Cours from "./screens/Cours";
 
 const Tab = createBottomTabNavigator();
 
@@ -20,6 +21,7 @@ export default function App() {
         <Tab.Screen name="Connexion" component={Login} />
         <Tab.Screen name="Accueil" component={Accueil} />
         <Tab.Screen name="Inscription" component={Register} />
+        <Tab.Screen name="Cours" component={Cours} />
       </Tab.Navigator>
     </NavigationContainer>
   );
