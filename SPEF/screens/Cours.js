@@ -10,7 +10,13 @@ const backButtonConfig = {
     height: 50,
 };
 
-
+const trophyButtonConfig = {
+    imageSource: require('../assets/icons/trophy.png'),
+    x: 320,
+    y: 13,
+    width: 50,
+    height: 50,
+};
 
 /**
  * Component for displaying a course screen.
@@ -19,64 +25,55 @@ const backButtonConfig = {
  */
 export default function CourseScreen({ route }) {
     const navigation = useNavigation();
-    // Extracting the course object from the route parameters
     const { course } = route.params;
 
-    // If course is not provided, return null
-    // todo: return an error message to the user
     if (!course) {
         return null;
     }
 
-    // Rendering the course screen
+    const handleTrophyPress = () => {
+        if (course.rewards) {
+            navigation.navigate('RewardsScreen', { rewards: course.rewards });
+        }
+    };
+
     return (
-        <ImageBackground source={course.backgroundImage} resizeMode="cover"style={styles.image}>
+        <ImageBackground source={course.backgroundImage} resizeMode="cover" style={styles.image}>
+            {/* Back button */}
+            <TouchableOpacity style={[styles.backButton, { left: backButtonConfig.x, top: backButtonConfig.y }]}
+                onPress={() => navigation.navigate('Accueil')}>
+                <Image source={backButtonConfig.imageSource} style={{ width: backButtonConfig.width, height: backButtonConfig.height }} />
+            </TouchableOpacity>
 
-        {/* Rendering back button */}
-        <TouchableOpacity style={[styles.backButton, { left: backButtonConfig.x, top: backButtonConfig.y }]}
-            onPress={() => navigation.navigate('Accueil')} >
-            <Image source={backButtonConfig.imageSource} style={{ width: backButtonConfig.width, height: backButtonConfig.height }}/>
-        </TouchableOpacity>
+            {/* Trophy button */}
+            {course.rewards != null &&
+                <TouchableOpacity style={[styles.trophyButton, { left: trophyButtonConfig.x, top: trophyButtonConfig.y }]}
+                    onPress={handleTrophyPress}>
+                    <Image source={trophyButtonConfig.imageSource} style={{ width: trophyButtonConfig.width, height: trophyButtonConfig.height }} />
+                </TouchableOpacity>
+            }
 
-
-            {/* Mapping through elements of the course */}
+            {/* Course elements */}
             {course.elements.map((element, index) => {
                 if (element.type === 'text') {
-                    // Rendering text element
                     return (
-                        <Text
-                            key={`text-${index}`}
-                            style={getTextStyle(element)}
-                        >
+                        <Text key={`text-${index}`} style={getTextStyle(element)}>
                             {element.content}
                         </Text>
                     );
                 } else if (element.type === 'rectangle') {
-                    // Rendering rectangle element
                     return (
-                        <View
-                            key={`rectangle-${index}`}
-                            style={getRectangleStyle(element)}
-                        ></View>
+                        <View key={`rectangle-${index}`} style={getRectangleStyle(element)}></View>
                     );
                 }
             })}
 
-            {/* Rendering character image */}
-            <Image
-                key="character"
-                source={course.character.imagePath}
-                style={getCharacterStyle(course.character)}
-            />
+            {/* Character image */}
+            <Image key="character" source={course.character.imagePath} style={getCharacterStyle(course.character)} />
         </ImageBackground>
     );
 }
 
-/**
- * Gets the text style based on provided configuration.
- * @param {object} textConfig - Configuration object for text style.
- * @returns {object} - Style object for text.
- */
 const getTextStyle = (textConfig) => {
     return {
         fontSize: textConfig.size,
@@ -92,11 +89,6 @@ const getTextStyle = (textConfig) => {
     };
 };
 
-/**
- * Gets the style for the rectangle element based on provided configuration.
- * @param {object} rectConfig - Configuration object for rectangle style.
- * @returns {object} - Style object for rectangle.
- */
 const getRectangleStyle = (rectConfig) => {
     return {
         position: 'absolute',
@@ -109,11 +101,6 @@ const getRectangleStyle = (rectConfig) => {
     };
 };
 
-/**
- * Gets the style for the character image based on provided configuration.
- * @param {object} charConfig - Configuration object for character image style.
- * @returns {object} - Style object for character image.
- */
 const getCharacterStyle = (charConfig) => {
     return {
         position: 'absolute',
@@ -135,6 +122,13 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: backButtonConfig.width,
         height: backButtonConfig.height,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    trophyButton: {
+        position: 'absolute',
+        width: trophyButtonConfig.width,
+        height: trophyButtonConfig.height,
         alignItems: 'center',
         justifyContent: 'center',
     },

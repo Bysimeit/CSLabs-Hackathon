@@ -26,6 +26,16 @@ var myGUIConfig = {
       borderRadius: 45,
       course : {
 		backgroundImage: require("../assets/map/sousMapSP3.png"),
+		rewards:[
+			{cost:40,
+			result:"Paquet de bonbons"},
+			{cost:70,
+			result:"Game de Smash Bros avec le prof"},
+			{cost:100,
+			result:"Cours fini 10min plus tôt"},
+			{cost:1000,
+			result:"Le prof se rase les cheveux"}, 
+		],
 		elements: [
 			{
 				type: 'text',
