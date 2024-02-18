@@ -10,6 +10,8 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Dialog from "react-native-dialog";
+import { MaterialIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function Class({ navigation }) {
   const [students, setStudents] = useState([
@@ -26,7 +28,20 @@ export default function Class({ navigation }) {
     setStudents((current) => [...current, name]);
   };
 
-  const removeStudent = (index) => {
+  const removeStudent = (index, student) => {
+    Alert.alert("Supprimer ?", `Êtes-vous sûr de supprimer : ${student}`, [
+      {
+        text: "Non",
+        style: "cancel",
+      },
+      {
+        text: "Oui",
+        onPress: () => removeStudentConfirm(index),
+      },
+    ]);
+  };
+
+  const removeStudentConfirm = (index) => {
     setStudents((current) => current.filter((_, i) => i !== index));
   };
 
@@ -39,15 +54,24 @@ export default function Class({ navigation }) {
   };
 
   const handleOk = () => {
+    addStudent(newStudent);
     setDialogVisible(false);
   };
 
   return (
     <View style={styles.page}>
       <LinearGradient colors={["#FFFFFF", "#C0B1FF"]} style={styles.gradient}>
-        <Pressable style={styles.addButton} onPress={showDialog}>
-          <Text style={styles.addButtonText}>Ajouter un élève</Text>
-        </Pressable>
+        <View style={styles.header}>
+          <Pressable
+            onPress={() => navigation.navigate("Hub")}
+            style={styles.backButton}
+          >
+            <MaterialIcons name="arrow-back" size={24} color="white" />
+          </Pressable>
+          <Pressable style={styles.addButton} onPress={showDialog}>
+            <Text style={styles.addButtonText}>Ajouter un élève</Text>
+          </Pressable>
+        </View>
         <Dialog.Container visible={dialogVisible}>
           <Dialog.Title>Ajout d'un élève</Dialog.Title>
           <Dialog.Description>
@@ -64,8 +88,12 @@ export default function Class({ navigation }) {
           {students.map((student, index) => (
             <View key={index} style={styles.studentContainer}>
               <Text style={styles.studentName}>{student}</Text>
-              <Pressable onPress={() => removeStudent(index)}>
-                <Text style={styles.deleteIcon}>🗑️</Text>
+              <Pressable onPress={() => removeStudent(index, student)}>
+                <MaterialCommunityIcons
+                  name="trash-can"
+                  size={24}
+                  color="red"
+                />
               </Pressable>
             </View>
           ))}
@@ -83,7 +111,20 @@ const styles = StyleSheet.create({
   gradient: {
     flex: 1,
     alignItems: "center",
-    paddingTop: 20, // Ajoutez un peu d'espace pour le bouton
+    paddingTop: 20,
+  },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    paddingHorizontal: 20,
+  },
+  backButton: {
+    backgroundColor: "#BBAAF6",
+    padding: 5,
+    borderRadius: 20,
+    marginBottom: 20,
   },
   addButton: {
     backgroundColor: "#BBAAF6",
