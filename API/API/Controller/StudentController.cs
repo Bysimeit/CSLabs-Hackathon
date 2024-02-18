@@ -17,14 +17,22 @@ namespace API.Controller
 		}
 
 		[HttpPost]
-		[Route("NewAccount")]
-		public ActionResult PostNewAccount([FromBody] NewStudentAccountModel newStudentAccount)
+		[Route("New")]
+		public async Task<ActionResult> PostNewAccount([FromBody] NewStudentAccountModel newStudentAccount)
 		{
-			if(newStudentAccount != null)
+			if (newStudentAccount != null)
 			{
-				_unitOfWork.StudentsRepository.NewAccount(ConvertToStudent(newStudentAccount));
-				_unitOfWork.CompleteAsync();
-				return Ok();
+				try
+				{
+					await _unitOfWork.StudentsRepository.NewAccount(ConvertToStudent(newStudentAccount));
+					await _unitOfWork.CompleteAsync();
+					return Ok();
+				}
+				catch (Exception ex)
+				{
+					// Log the exception
+					return StatusCode(500, "An error occurred while adding the new student account.");
+				}
 			}
 			return NoContent();
 		}
