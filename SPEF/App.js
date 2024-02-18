@@ -6,6 +6,7 @@ import BackButtonHandler from "./components/BackButtonHandler";
 import Accueil from "./screens/Accueil";
 import Login from "./screens/account/Login";
 import Register from "./screens/account/Register";
+import Cours from "./screens/Cours";
 import NewStudent from "./screens/NewStudent";
 import Hub from "./screens/teacher/Hub";
 import Class from "./screens/teacher/Class";
@@ -27,6 +28,7 @@ export default function App() {
         <Tab.Screen name="Attente" component={NewStudent} />
         <Tab.Screen name="Accueil" component={Accueil} />
         <Tab.Screen name="Inscription" component={Register} />
+        <Tab.Screen name="Cours" component={Cours} />
         <Tab.Screen name="Hub" component={Hub} />
         <Tab.Screen name="Classe" component={Class} />
         <Tab.Screen name="Gestion du cours" component={ManageLesson} />
