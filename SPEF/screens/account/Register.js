@@ -9,6 +9,7 @@ import {
   Switch,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import useFetchUser from "../../services/useFetchUser";
 
 export default function Login({ navigation }) {
   const [lastName, setLastName] = useState("");
@@ -17,13 +18,29 @@ export default function Login({ navigation }) {
   const [password, setPassword] = useState("");
   const [isTeacher, setIsTeacher] = useState(false);
 
-  const handlePressRegister = () => {
+  const { newUser } = useFetchUser();
+
+  const handlePressRegister = async () => {
     if (lastName != "") {
       if (firstName != "") {
         if (userName != "") {
           if (password != "") {
-            setUserName("");
-            setPassword("");
+            newUser(lastName, firstName, userName, password).then((result) => {
+              console.log(result.status);
+              if (result.status == 200) {
+                Alert.alert(
+                  "Bienvenue !",
+                  "Ton compte a été crée avec succès !"
+                );
+                setLastName("");
+                setFirstName("");
+                setUserName("");
+                setPassword("");
+                navigation.navigate("Connexion");
+              } else {
+                Alert.alert("Erreur", "Veuillez réessayer.");
+              }
+            });
           } else {
             Alert.alert(
               "Attends !",
@@ -34,7 +51,7 @@ export default function Login({ navigation }) {
           Alert.alert("Attends !", "N'oublie pas de mettre ton pseudo.");
         }
       } else {
-        Alert.alert("Attends !", "N'oublie pas de mettre ton présnom.");
+        Alert.alert("Attends !", "N'oublie pas de mettre ton prénom.");
       }
     } else {
       Alert.alert("Attends !", "N'oublie pas de mettre ton nom.");

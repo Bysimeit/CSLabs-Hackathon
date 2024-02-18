@@ -20,6 +20,12 @@ export default function Login({ navigation }) {
       if (password != "") {
         setUserName("");
         setPassword("");
+        setIsTeacher(false);
+        if (isTeacher) {
+          navigation.navigate("Hub");
+        } else {
+          navigation.navigate("Attente");
+        }
       } else {
         Alert.alert("Attends !", "N'oublie pas de mettre ton mot de passe.");
       }
