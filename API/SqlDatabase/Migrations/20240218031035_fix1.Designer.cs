@@ -11,8 +11,8 @@ using SqlDatabase;
 namespace SqlDatabase.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20240217222801_base")]
-    partial class @base
+    [Migration("20240218031035_fix1")]
+    partial class fix1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,13 +32,16 @@ namespace SqlDatabase.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("TeacherId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("TeacherId")
-                        .IsUnique();
+                    b.HasIndex("TeacherId");
 
                     b.ToTable("Classes");
                 });
@@ -87,14 +90,9 @@ namespace SqlDatabase.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TeacherId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("ClassId");
-
-                    b.HasIndex("TeacherId");
 
                     b.ToTable("Lessons");
                 });
@@ -230,8 +228,8 @@ namespace SqlDatabase.Migrations
             modelBuilder.Entity("Shared.Entities.Class", b =>
                 {
                     b.HasOne("Shared.Entities.Teacher", "Teacher")
-                        .WithOne("Class")
-                        .HasForeignKey("Shared.Entities.Class", "TeacherId")
+                        .WithMany("Classes")
+                        .HasForeignKey("TeacherId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -254,18 +252,10 @@ namespace SqlDatabase.Migrations
                     b.HasOne("Shared.Entities.Class", "Class")
                         .WithMany("Lessons")
                         .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Shared.Entities.Teacher", "Teacher")
-                        .WithMany("Lessons")
-                        .HasForeignKey("TeacherId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.Navigation("Class");
-
-                    b.Navigation("Teacher");
                 });
 
             modelBuilder.Entity("Shared.Entities.PointLesson", b =>
@@ -291,9 +281,7 @@ namespace SqlDatabase.Migrations
                 {
                     b.HasOne("Shared.Entities.Class", "Class")
                         .WithMany("Students")
-                        .HasForeignKey("ClassId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ClassId");
 
                     b.Navigation("Class");
                 });
@@ -358,10 +346,7 @@ namespace SqlDatabase.Migrations
 
             modelBuilder.Entity("Shared.Entities.Teacher", b =>
                 {
-                    b.Navigation("Class")
-                        .IsRequired();
-
-                    b.Navigation("Lessons");
+                    b.Navigation("Classes");
                 });
 #pragma warning restore 612, 618
         }

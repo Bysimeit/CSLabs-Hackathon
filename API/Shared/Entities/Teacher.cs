@@ -13,7 +13,7 @@ namespace Shared.Entities
 		public string FirstName { get; set; }
 		public string UserName { get; set; }
 		public string Password { get; set; }
-		public Class Class { get; set; }
-		public List<Lesson> Lessons { get; set; }
+		public List<Class> Classes { get; set; }
+		//public List<Lesson> Lessons { get; set; }
 	}
 }

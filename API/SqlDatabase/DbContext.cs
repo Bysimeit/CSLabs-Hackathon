@@ -35,30 +35,33 @@ namespace SqlDatabase
 				.WithMany(l => l.Events)
 				.HasForeignKey(e => e.LessonId);
 
-			modelBuilder.Entity<Lesson>()
-				.HasOne(l => l.Teacher)
-				.WithMany(t => t.Lessons)
-				.HasForeignKey(l => l.TeacherId);
+			//modelBuilder.Entity<Lesson>()
+			//	.HasOne(l => l.Teacher)
+			//	.WithMany(t => t.Lessons)
+			//	.HasForeignKey(l => l.TeacherId)
+			//	.OnDelete(DeleteBehavior.NoAction);
 
 			modelBuilder.Entity<Lesson>()
 				.HasOne(l => l.Class)
 				.WithMany(c => c.Lessons)
-				.HasForeignKey(l => l.ClassId);
+				.HasForeignKey(l => l.ClassId)
+				.OnDelete(DeleteBehavior.NoAction);
 
 			modelBuilder.Entity<Student>()
 				.HasOne(s => s.Class)
 				.WithMany(c => c.Students)
-				.HasForeignKey(s => s.ClassId);
+				.HasForeignKey(s => s.ClassId)
+				.IsRequired(false);
 
 			modelBuilder.Entity<Task>()
 				.HasOne(t => t.Lesson)
-				.WithMany(t => t.Tasks)
+				.WithMany(l => l.Tasks)
 				.HasForeignKey(t => t.LessonId);
 
-			modelBuilder.Entity<Teacher>()
-				.HasOne(t => t.Class)
-				.WithOne(c => c.Teacher)
-				.HasForeignKey<Class>(c => c.TeacherId);
+			modelBuilder.Entity<Class>()
+				.HasOne(c => c.Teacher)
+				.WithMany(t => t.Classes)
+				.HasForeignKey(c => c.TeacherId);
 
 			modelBuilder.Entity<PointLesson>()
 				.HasKey(s => new { s.StudentId, s.LessonId });

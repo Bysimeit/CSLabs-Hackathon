@@ -121,6 +121,7 @@ C:\Users\Bryce\OneDrive\Bureau\Git\CSLabs-Hackathon\API\API\bin\Debug\net6.0\Mic
 C:\Users\Bryce\OneDrive\Bureau\Git\CSLabs-Hackathon\API\API\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
 C:\Users\Bryce\OneDrive\Bureau\Git\CSLabs-Hackathon\API\API\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\Bryce\OneDrive\Bureau\Git\CSLabs-Hackathon\API\API\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\Bryce\OneDrive\Bureau\Git\CSLabs-Hackathon\API\API\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Bryce\OneDrive\Bureau\Git\CSLabs-Hackathon\API\API\bin\Debug\net6.0\System.CodeDom.dll
 C:\Users\Bryce\OneDrive\Bureau\Git\CSLabs-Hackathon\API\API\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\Bryce\OneDrive\Bureau\Git\CSLabs-Hackathon\API\API\bin\Debug\net6.0\System.Drawing.Common.dll

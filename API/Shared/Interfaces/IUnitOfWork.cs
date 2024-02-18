@@ -8,5 +8,14 @@ namespace Shared.Interfaces
 {
 	public interface IUnitOfWork
 	{
+		IClassesRepository ClassesRepository { get; }
+		IEventsRepository EventsRepository { get; }
+		ILessonsRepository LessonsRepository { get; }
+		IStudentsRepository StudentsRepository { get; }
+		ITasksRepository TasksRepository { get; }
+		ITeachersRepository TeachersRepository { get; }
+
+		Task<bool> CompleteAsync();
+		bool HasChanges();
 	}
 }
