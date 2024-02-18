@@ -5,7 +5,7 @@
 namespace SqlDatabase.Migrations
 {
     /// <inheritdoc />
-    public partial class @base : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -51,7 +51,6 @@ namespace SqlDatabase.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TeacherId = table.Column<int>(type: "int", nullable: false),
                     ClassId = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -62,14 +61,7 @@ namespace SqlDatabase.Migrations
                         name: "FK_Lessons_Classes_ClassId",
                         column: x => x.ClassId,
                         principalTable: "Classes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Lessons_Teachers_TeacherId",
-                        column: x => x.TeacherId,
-                        principalTable: "Teachers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -192,8 +184,7 @@ namespace SqlDatabase.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Classes_TeacherId",
                 table: "Classes",
-                column: "TeacherId",
-                unique: true);
+                column: "TeacherId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Events_LessonId",
@@ -204,11 +195,6 @@ namespace SqlDatabase.Migrations
                 name: "IX_Lessons_ClassId",
                 table: "Lessons",
                 column: "ClassId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Lessons_TeacherId",
-                table: "Lessons",
-                column: "TeacherId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PointLessons_LessonId",
