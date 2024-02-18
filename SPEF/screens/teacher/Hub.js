@@ -10,6 +10,7 @@ import {
 import { useState } from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import Dialog from "react-native-dialog";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function Hub({ navigation }) {
   const [dialogVisible, setDialogVisible] = useState(false);
@@ -31,6 +32,10 @@ export default function Hub({ navigation }) {
     setDialogVisible(false);
   };
 
+  const handlePressLogOut = () => {
+    navigation.navigate("Connexion");
+  };
+
   return (
     <View style={styles.page}>
       <LinearGradient colors={["#FFFFFF", "#C0B1FF"]} style={styles.gradient}>
@@ -41,6 +46,10 @@ export default function Hub({ navigation }) {
               onPress={handleManageClass}
             >
               <Text style={styles.buttonText}>Gérer la classe</Text>
+            </Pressable>
+            <Pressable style={styles.logoutButton} onPress={handlePressLogOut}>
+              <MaterialCommunityIcons name="logout" size={24} color="white" />
+              <Text style={styles.buttonText}>Se déconnecter</Text>
             </Pressable>
             <View style={styles.separator} />
             <View style={styles.coursesContainer}>
@@ -61,7 +70,10 @@ export default function Hub({ navigation }) {
                 <Dialog.Button label="OK" onPress={handleOk} />
               </Dialog.Container>
               {/* Exemple de tuile pour un cours existant - dupliquez pour plus de cours */}
-              <TouchableOpacity style={styles.courseTile}>
+              <TouchableOpacity
+                style={styles.courseTile}
+                onPress={() => navigation.navigate("Gestion du cours")}
+              >
                 <Text style={styles.courseText}>Cours 1</Text>
               </TouchableOpacity>
             </View>
@@ -124,5 +136,16 @@ const styles = StyleSheet.create({
   },
   courseText: {
     color: "#333333",
+  },
+  logoutButton: {
+    backgroundColor: "#BBAAF6",
+    borderRadius: 20,
+    padding: 10,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    height: 50,
+    marginTop: 20,
+    alignSelf: "center",
   },
 });

@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "uBQlI15bT/wZ+R+NAfzCwO7eurn/w9KOqed3VRy9Q/I8nxKIrUdcZU5RbfLCwYPzOvrXbMsQmDWhbyPMhsBMWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bryce\\OneDrive\\Bureau\\Git\\CSLabs-Hackathon\\API\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\sca\\Documents\\Projets\\CSLabs-Hackathon\\API\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bryce\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Bryce\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
