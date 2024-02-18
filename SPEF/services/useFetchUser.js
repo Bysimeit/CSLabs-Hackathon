@@ -8,7 +8,7 @@ export default function useFetchUser() {
     try {
       const response = await axios.post(`${IP_API}/user`, {
         username: userName,
-        password: password,
+        password,
       });
 
       return { status: response.status, data: response.data };
@@ -23,5 +23,34 @@ export default function useFetchUser() {
     }
   };
 
-  return { loginFetch };
+  const newUser = async (lastName, firstName, userName, password) => {
+    try {
+      const body = {
+        name: lastName,
+        firstname: firstName,
+        username: userName,
+        password: password,
+      };
+
+      console.log(body);
+
+      const response = axios.post(`${IP_API}/Student/NewAccount`, body, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      return { status: response.status };
+    } catch (e) {
+      const message = errorMessage(
+        e.response.status,
+        e.response.data,
+        "Nouveau élève"
+      );
+
+      throw new Error(message);
+    }
+  };
+
+  return { loginFetch, newUser };
 }

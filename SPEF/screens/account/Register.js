@@ -9,6 +9,7 @@ import {
   Switch,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import useFetchUser from "../../services/useFetchUser";
 
 export default function Login({ navigation }) {
   const [lastName, setLastName] = useState("");
@@ -17,15 +18,29 @@ export default function Login({ navigation }) {
   const [password, setPassword] = useState("");
   const [isTeacher, setIsTeacher] = useState(false);
 
-  const handlePressRegister = () => {
+  const { newUser } = useFetchUser();
+
+  const handlePressRegister = async () => {
     if (lastName != "") {
       if (firstName != "") {
         if (userName != "") {
           if (password != "") {
-            setLastName("");
-            setFirstName("");
-            setUserName("");
-            setPassword("");
+            const result = await newUser(
+              lastName,
+              firstName,
+              userName,
+              password
+            );
+            if (result.status <= 201) {
+              Alert.alert("Bienvenue !", "Ton compte a été crée avec succès !");
+              setLastName("");
+              setFirstName("");
+              setUserName("");
+              setPassword("");
+              navigation.navigate("Connexion");
+            } else {
+              Alert.alert("Erreur", "Veuillez réessayer.");
+            }
           } else {
             Alert.alert(
               "Attends !",
