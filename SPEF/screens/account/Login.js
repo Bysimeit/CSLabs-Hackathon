@@ -21,7 +21,11 @@ export default function Login({ navigation }) {
         setUserName("");
         setPassword("");
         setIsTeacher(false);
-        navigation.navigate("Attente");
+        if (isTeacher) {
+          navigation.navigate("Hub");
+        } else {
+          navigation.navigate("Attente");
+        }
       } else {
         Alert.alert("Attends !", "N'oublie pas de mettre ton mot de passe.");
       }

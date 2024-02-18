@@ -3,7 +3,7 @@ import { LinearGradient } from "expo-linear-gradient";
 
 export default function NewStudent({ navigation }) {
   const handlePressLogOut = () => {
-    navigation.navigate("Hub");
+    navigation.navigate("Accueil");
   };
 
   return (

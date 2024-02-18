@@ -25,22 +25,22 @@ export default function Login({ navigation }) {
       if (firstName != "") {
         if (userName != "") {
           if (password != "") {
-            const result = await newUser(
-              lastName,
-              firstName,
-              userName,
-              password
-            );
-            if (result.status <= 201) {
-              Alert.alert("Bienvenue !", "Ton compte a été crée avec succès !");
-              setLastName("");
-              setFirstName("");
-              setUserName("");
-              setPassword("");
-              navigation.navigate("Connexion");
-            } else {
-              Alert.alert("Erreur", "Veuillez réessayer.");
-            }
+            newUser(lastName, firstName, userName, password).then((result) => {
+              console.log(result.status);
+              if (result.status == 200) {
+                Alert.alert(
+                  "Bienvenue !",
+                  "Ton compte a été crée avec succès !"
+                );
+                setLastName("");
+                setFirstName("");
+                setUserName("");
+                setPassword("");
+                navigation.navigate("Connexion");
+              } else {
+                Alert.alert("Erreur", "Veuillez réessayer.");
+              }
+            });
           } else {
             Alert.alert(
               "Attends !",

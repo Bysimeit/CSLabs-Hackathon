@@ -34,7 +34,7 @@ export default function useFetchUser() {
 
       console.log(body);
 
-      const response = axios.post(`${IP_API}/Student/NewAccount`, body, {
+      const response = await axios.post(`${IP_API}/Student/NewAccount`, body, {
         headers: {
           "Content-Type": "application/json",
         },
